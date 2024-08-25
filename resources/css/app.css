@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Mea+Culpa&family=Poly:ital@0;1&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+.fixed-width-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide-enter {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.slide-enter-active {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+
+.slide-exit {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.slide-exit-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+}
+
+.mea-culpa-regular {
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.halant-light {
+    font-family: "Halant", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.halant-regular {
+    font-family: "Halant", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.halant-medium {
+    font-family: "Halant", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.halant-semibold {
+    font-family: "Halant", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.halant-bold {
+    font-family: "Halant", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poly-regular {
+    font-family: "Poly", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poly-regular-italic {
+    font-family: "Poly", serif;
+    font-weight: 400;
+    font-style: italic;
+}
